@@ -52,8 +52,11 @@ export const metadata: Metadata = {
     images: ["/me.jpg"],
     creator: "@abdoakl18",
   },
-  // Add other social profiles as metadata if needed
+  other: {
+    "google-site-verification": "Sfgnw7gsxkiwTSMbE9wkDZcrl4lWYqx2F1DEkeWsiII",
+  },
 };
+
 
 export default function RootLayout({
   children,
