@@ -39,7 +39,7 @@ export function About() {
             <div className="relative h-full bg-gray-900/40 backdrop-blur-md border border-cyan-500/30 rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 hover:border-cyan-400/50 transition-all">
               <h3 className="mb-4 sm:mb-6 text-cyan-300">Professional Profile</h3>
               <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                I'm a passionate Full-Stack Developer with expertise in creating robust, 
+                I&apos;m a passionate Full-Stack Developer with expertise in creating robust, 
                 scalable web applications. I combine creative problem-solving with technical 
                 excellence to deliver exceptional digital solutions.
               </p>
@@ -48,10 +48,18 @@ export function About() {
                 I bring ideas to life through clean code, modern design patterns, 
                 and cutting-edge development practices.
               </p>
-              <GlowingButton>
-                <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                Download CV
-              </GlowingButton>
+              
+              <a
+                href="https://drive.google.com/uc?export=download&id=1xC8EL_nFQHnHF2tgCM2OMunOLc0HijcI"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GlowingButton>
+                  <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Download CV
+                </GlowingButton>
+              </a>
             </div>
           </motion.div>
 
