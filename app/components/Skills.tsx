@@ -4,32 +4,57 @@ import { motion } from 'motion/react';
 import { Code2, Server, Cloud, TestTube } from 'lucide-react';
 
 export function Skills() {
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      icon: Code2,
-      color: 'from-cyan-500 to-blue-500',
-      skills: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'SASS'],
-    },
-    {
-      title: 'Backend',
-      icon: Server,
-      color: 'from-purple-500 to-pink-500',
-      skills: ['Node.js', 'Express', 'PostgreSQL'],
-    },
-    {
-      title: 'DevOps & Cloud',
-      icon: Cloud,
-      color: 'from-pink-500 to-rose-500',
-      skills: ['AWS', 'CircleCI'],
-    },
-    {
-      title: 'Testing',
-      icon: TestTube,
-      color: 'from-violet-500 to-purple-500',
-      skills: ['Jasmine'],
-    },
-  ];
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: Code2,
+    color: "from-cyan-500 to-blue-500",
+    skills: [
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+      "HTML5",
+      "CSS3 / SCSS",
+      "Responsive Design",
+    ],
+  },
+  {
+    title: "Backend",
+    icon: Server,
+    color: "from-purple-500 to-pink-500",
+    skills: [
+      "ASP.NET Core",
+      "C#",
+      "Entity Framework Core",
+      "SQL Server",
+      "RESTful APIs",
+      "Authentication & Authorization",
+    ],
+  },
+  {
+    title: "DevOps & Cloud",
+    icon: Cloud,
+    color: "from-pink-500 to-rose-500",
+    skills: [
+      "CI/CD Pipelines",
+      "Docker",
+      "GitHub Actions",
+      "Netlify",
+      "AWS Deployment",
+    ],
+  },
+  {
+    title: "Testing & Quality",
+    icon: TestTube,
+    color: "from-violet-500 to-purple-500",
+    skills: [
+      "Unit Testing (Jasmine)",
+      "Integration Testing",
+      "Debugging & Optimization",
+    ],
+  },
+];
+
 
   return (
     <section id="skills" className="snap-start min-h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,42 +13,54 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Abdelrahman Mahmoud | Full-Stack Developer",
+  metadataBase: new URL("https://abdelrahman-mahmoud.netlify.app"),
+  title: "Abdelrahman Mahmoud | Full-Stack Developer (Angular & ASP.NET Core)",
   description:
-    "Portfolio of Abdelrahman Mahmoud — a Full-Stack Developer specializing in Angular, Node.js, Express, and PostgreSQL. Explore projects, skills, and contact information.",
+    "Portfolio of Abdelrahman Mahmoud — a Full-Stack Developer specializing in Angular, ASP.NET Core, C#, SQL Server, and modern web technologies. Explore projects, backend APIs, and UI designs.",
   authors: [{ name: "Abdelrahman Mahmoud" }],
   keywords: [
     "Abdelrahman Mahmoud",
     "Full Stack Developer",
     "Web Developer",
     "Angular",
+    "ASP.NET Core",
+    "C#",
+    "SQL Server",
+    "Entity Framework",
     "Node.js",
     "Express",
     "PostgreSQL",
-    "Portfolio",
-    "JavaScript",
     "TypeScript",
+    "JavaScript",
+    "Tailwind CSS",
     "SASS",
+    "Next.js",
     "Developer Egypt",
   ],
-  themeColor: "#0d0d1f",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Abdelrahman Mahmoud | Full-Stack Developer",
+    title: "Abdelrahman Mahmoud | Full-Stack Developer (Angular & ASP.NET Core)",
     description:
-      "Discover the futuristic portfolio of Abdelrahman Mahmoud — Full-Stack Developer skilled in modern web technologies and UI design.",
-    url: "https://www.linkedin.com/in/abdelrahman-mahmoud-akl/",
+      "Discover the portfolio of Abdelrahman Mahmoud — a Full-Stack Developer skilled in Angular, ASP.NET Core, C#, and SQL Server with experience in scalable APIs and modern UI development.",
+    url: "https://abdelrahman-mahmoud.netlify.app",
     siteName: "Abdelrahman Mahmoud Portfolio",
-    images: ["/me.jpg"],
+    images: [
+      {
+        url: "/me.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Abdelrahman Mahmoud Portrait",
+      },
+    ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdelrahman Mahmoud | Full-Stack Developer",
+    title: "Abdelrahman Mahmoud | Full-Stack Developer (Angular & ASP.NET Core)",
     description:
-      "Explore the portfolio of Abdelrahman Mahmoud — a creative full-stack developer with expertise in Angular, Node.js, and PostgreSQL.",
+      "Explore the portfolio of Abdelrahman Mahmoud — a creative full-stack developer with expertise in Angular, ASP.NET Core, C#, and SQL Server.",
     images: ["/me.jpg"],
     creator: "@abdoakl18",
   },
@@ -57,6 +69,9 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#0d0d1f",
+};
 
 export default function RootLayout({
   children,
