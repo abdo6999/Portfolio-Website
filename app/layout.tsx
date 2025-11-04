@@ -109,13 +109,13 @@ export default function RootLayout({
               url: "https://abdelrahman-mahmoud.netlify.app",
               image: "https://abdelrahman-mahmoud.netlify.app/me.jpg",
               sameAs: [
-                "https://www.linkedin.com/in/your-linkedin", // Replace with your actual LinkedIn URL
+                "https://www.linkedin.com/in/abdelrahman-mahmoud-akl/", 
                 "https://github.com/abdo6999",
                 "https://twitter.com/abdoakl18"
               ],
               alumniOf: {
                 "@type": "EducationalOrganization",
-                name: "Your University" // Replace with your actual education
+                name: "Mansoura University" 
               },
               knowsAbout: [
                 "Angular",
