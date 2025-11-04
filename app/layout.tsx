@@ -38,7 +38,23 @@ export const metadata: Metadata = {
     "Developer Egypt",
   ],
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+      { url: "/apple-icon.png", type: "image/png", sizes: "180x180" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-icon.png" }
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+      },
+    ],
   },
   openGraph: {
     title: "Abdelrahman Mahmoud | Full-Stack Developer (Angular & ASP.NET Core)",
@@ -80,6 +96,44 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Abdelrahman Mahmoud",
+              jobTitle: "Full-Stack Developer",
+              description: "Full-Stack Developer specializing in Angular, ASP.NET Core, C#, and SQL Server",
+              url: "https://abdelrahman-mahmoud.netlify.app",
+              image: "https://abdelrahman-mahmoud.netlify.app/me.jpg",
+              sameAs: [
+                "https://www.linkedin.com/in/your-linkedin", // Replace with your actual LinkedIn URL
+                "https://github.com/abdo6999",
+                "https://twitter.com/abdoakl18"
+              ],
+              alumniOf: {
+                "@type": "EducationalOrganization",
+                name: "Your University" // Replace with your actual education
+              },
+              knowsAbout: [
+                "Angular",
+                "ASP.NET Core",
+                "C#",
+                "SQL Server",
+                "Entity Framework",
+                "Node.js",
+                "Express",
+                "PostgreSQL",
+                "TypeScript",
+                "JavaScript",
+                "Next.js"
+              ]
+            })
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
