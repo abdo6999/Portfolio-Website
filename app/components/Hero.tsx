@@ -46,7 +46,7 @@ export function Hero() {
 
         {/* REAL SEO H1 */}
         <h1
-          className="text-white mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
+          className="text-white sr-only mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
           itemProp="name"
         >
           Abdelrahman Mahmoud — Full-Stack Developer
