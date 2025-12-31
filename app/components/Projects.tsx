@@ -122,7 +122,7 @@ export function Projects() {
                     className={`inline-flex p-2 rounded-lg bg-gradient-to-r ${project.gradient}`}
                   >
                     <div className="w-8 h-8 flex items-center justify-center">
-                      <div className="w-4 h-4 bg-white rounded-sm" />
+                        <div className="w-4 h-4 bg-white rounded-sm" aria-hidden="true" />
                     </div>
                   </div>
                   <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -131,9 +131,10 @@ export function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
+                         className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
+                         aria-label={`Open ${project.name} GitHub repository (opens in a new tab)`}
                       >
-                        <Github className="w-4 h-4 text-cyan-400" />
+                          <Github aria-hidden="true" className="w-4 h-4 text-cyan-400" />
                       </a>
                     )}
                     {project.link && (
@@ -141,9 +142,10 @@ export function Projects() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
+                         className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
+                         aria-label={`Open ${project.name} live site (opens in a new tab)`}
                       >
-                        <ExternalLink className="w-4 h-4 text-cyan-400" />
+                          <ExternalLink aria-hidden="true" className="w-4 h-4 text-cyan-400" />
                       </a>
                     )}
                   </div>

@@ -1,5 +1,9 @@
 "use client";
-import { ParticleBackground } from "./components/ParticleBackground";
+import dynamic from 'next/dynamic';
+const ParticleBackground = dynamic(
+  () => import('./components/ParticleBackground').then((mod) => mod.ParticleBackground),
+  { ssr: false, loading: () => null }
+);
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Skills } from "./components/Skills";
@@ -9,7 +13,7 @@ import { Contact } from "./components/Contact";
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-linear-to-br from-[#0a0e27] via-[#050816] to-[#0a0e27] overflow-x-hidden">
-      {/* Particle Background */}
+      {/* Particle Background (dynamically loaded to reduce initial JS) */}
       <ParticleBackground />
 
       {/* Gradient Overlays */}
@@ -26,7 +30,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <main className="relative z-10">
+      <main id="main" role="main" className="relative z-10">
         <Hero />
         <About />
         <Skills />
@@ -35,7 +39,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 py-8 border-t border-gray-800/50 backdrop-blur-sm">
+      <footer role="contentinfo" className="relative z-10 py-8 border-t border-gray-800/50 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="text-gray-400">

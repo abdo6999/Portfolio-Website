@@ -83,8 +83,8 @@ const skillCategories = [
             >
               <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-20 rounded-2xl blur-xl group-hover:blur-2xl transition-all`} />
               <div className="relative bg-gray-900/40 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all h-full">
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${category.color} mb-4`}>
-                  <category.icon className="w-6 h-6 text-white" />
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${category.color} mb-4`} aria-hidden="true">
+                  <category.icon aria-hidden="true" className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="mb-4 text-white">{category.title}</h3>
                 <div className="flex flex-wrap gap-2">

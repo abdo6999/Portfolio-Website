@@ -54,9 +54,10 @@ export function About() {
                 download
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Download CV (opens in a new tab)"
               >
                 <GlowingButton>
-                  <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <Download aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
                   Download CV
                 </GlowingButton>
               </a>

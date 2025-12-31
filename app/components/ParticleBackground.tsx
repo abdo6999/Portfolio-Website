@@ -6,6 +6,7 @@ export function ParticleBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -76,7 +77,9 @@ export function ParticleBackground() {
       requestAnimationFrame(animate);
     }
 
-    animate();
+    if (!prefersReducedMotion) {
+      animate();
+    }
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
@@ -95,6 +98,8 @@ export function ParticleBackground() {
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
       style={{ opacity: 0.4 }}
+      aria-hidden="true"
+      role="presentation"
     />
   );
 }

@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Send, Mail, MessageSquare, User } from 'lucide-react';
 import { GlowingButton } from './GlowingButton';
-import emailjs from '@emailjs/browser';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -13,6 +12,7 @@ export function Contact() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -21,7 +21,7 @@ export function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
@@ -31,18 +31,17 @@ export function Contact() {
       message: formData.message,
     };
 
-    emailjs
-      .send('service_swcrbaa', 'template_izdr5lh', templateParams, 'F1APoqixtwh_KETbq')
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('✅ Your message has been sent. Thank you!');
-        setFormData({ name: '', email: '', message: '' });
-      })
-      .catch((error) => {
-        console.error('FAILED...', error);
-        alert('❌ Sorry, there was an error sending your message. Please try again later.');
-      })
-      .finally(() => setLoading(false));
+    try {
+      const { default: emailjs } = await import('@emailjs/browser');
+      await emailjs.send('service_swcrbaa', 'template_izdr5lh', templateParams, 'F1APoqixtwh_KETbq');
+      setStatusMessage('✅ Your message has been sent. Thank you!');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('FAILED...', error);
+      setStatusMessage('❌ Sorry, there was an error sending your message. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -79,7 +78,7 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="relative">
                 <label htmlFor="name" className="block mb-2 text-gray-300">
-                  <User className="w-4 h-4 inline mr-2" />
+                  <User aria-hidden="true" className="w-4 h-4 inline mr-2" />
                   Name
                 </label>
                 <input
@@ -96,7 +95,7 @@ export function Contact() {
 
               <div className="relative">
                 <label htmlFor="email" className="block mb-2 text-gray-300">
-                  <Mail className="w-4 h-4 inline mr-2" />
+                  <Mail aria-hidden="true" className="w-4 h-4 inline mr-2" />
                   Email
                 </label>
                 <input
@@ -113,7 +112,7 @@ export function Contact() {
 
               <div className="relative">
                 <label htmlFor="message" className="block mb-2 text-gray-300">
-                  <MessageSquare className="w-4 h-4 inline mr-2" />
+                  <MessageSquare aria-hidden="true" className="w-4 h-4 inline mr-2" />
                   Message
                 </label>
                 <textarea
@@ -134,6 +133,11 @@ export function Contact() {
                   {loading ? 'Sending...' : 'Send Message'}
                 </GlowingButton>
               </div>
+              {statusMessage && (
+                <div role="status" aria-live="polite" className="mt-4 text-center text-sm text-gray-200">
+                  {statusMessage}
+                </div>
+              )}
             </form>
           </div>
         </motion.div>

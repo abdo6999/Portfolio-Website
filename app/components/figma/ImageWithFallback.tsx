@@ -14,16 +14,28 @@ export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElemen
 
   const { src, alt, style, className, ...rest } = props
 
+  // Ensure alt is defined for accessibility; fall back to empty string if not provided.
+  const safeAlt = typeof alt === 'string' ? alt : ''
+
+  type ImageProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+    "data-original-url"?: string;
+  };
+  const imgProps:ImageProps  = { ...rest, loading: (rest as any).loading ?? 'lazy', decoding: 'async' }
+
+
+
   return didError ? (
     <div
       className={`inline-block bg-gray-100 text-center align-middle ${className ?? ''}`}
       style={style}
+      role="img"
+      aria-label={safeAlt || 'Image failed to load'}
     >
       <div className="flex items-center justify-center w-full h-full">
-        <img src={ERROR_IMG_SRC} alt="Error loading image" {...rest} data-original-url={src} />
+        <img src={ERROR_IMG_SRC} alt={safeAlt || 'Error loading image'} {...imgProps} data-original-url={src as string} />
       </div>
     </div>
   ) : (
-    <img src={src} alt={alt} className={className} style={style} {...rest} onError={handleError} />
+    <img src={src} alt={safeAlt} className={className} style={style} {...imgProps} onError={handleError} />
   )
 }
