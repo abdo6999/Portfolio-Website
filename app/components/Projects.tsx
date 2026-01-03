@@ -35,7 +35,7 @@ export function Projects() {
         "A secure and scalable RESTful API for e-commerce with authentication, product, and order management.",
       tags: ["Node.js", "Express", "PostgreSQL"],
       gradient: "from-cyan-500 to-blue-500",
-      github: "https://github.com/abdo6999/strem-api",
+      github: "https://github.com/Abdelrahman-Mahmoud-Elsaeed/strem-api",
     },
     {
       name: "NGVGDB",
@@ -43,7 +43,7 @@ export function Projects() {
         "An Angular-powered video game database with advanced search, filtering, and collection features.",
       tags: ["Angular", "TypeScript", "API"],
       gradient: "from-violet-500 to-purple-500",
-      github: "https://github.com/abdo6999/NGVGDB",
+      github: "https://github.com/Abdelrahman-Mahmoud-Elsaeed/NGVGDB",
     },
     {
       name: "Boudi",
@@ -52,7 +52,7 @@ export function Projects() {
       tags: ["JavaScript", "CSS", "HTML"],
       gradient: "from-blue-500 to-cyan-500",
       link: "https://ornate-tiramisu-274761.netlify.app/",
-      github: "https://github.com/abdo6999/Bondi",
+      github: "https://github.com/Abdelrahman-Mahmoud-Elsaeed/Bondi",
     },
     {
       name: "Kasber",
@@ -61,7 +61,7 @@ export function Projects() {
       tags: ["HTML", "CSS", "JavaScript"],
       gradient: "from-cyan-500 to-purple-500",
       link: "https://papaya-bubblegum-6a9577.netlify.app/",
-      github: "https://github.com/abdo6999/Kasper",
+      github: "https://github.com/Abdelrahman-Mahmoud-Elsaeed/Kasper",
     },
     {
       name: "Product Dashboard",
@@ -69,7 +69,7 @@ export function Projects() {
         "A real-time analytics dashboard for managing and visualizing product performance data.",
       tags: ["Angular", "TypeScript", "Charts"],
       gradient: "from-purple-500 to-pink-500",
-      github: "https://github.com/abdo6999/product-dashboard",
+      github: "https://github.com/Abdelrahman-Mahmoud-Elsaeed/product-dashboard",
     },
     {
       name: "Personal Dashboard",
@@ -78,7 +78,7 @@ export function Projects() {
       tags: ["Angular", "SASS", "LocalStorage"],
       gradient: "from-pink-500 to-rose-500",
       link: "https://singular-brioche-0c8357.netlify.app/",
-      github: "https://github.com/abdo6999/angular-dashboard",
+      github: "https://github.com/Abdelrahman-Mahmoud-Elsaeed/angular-dashboard",
     },
   ];
 

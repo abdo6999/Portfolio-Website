@@ -78,7 +78,7 @@ Here’s a quick look at the final UI:
 
 If you’d like to connect or collaborate:  
 **Email:** abdelrahman.mahmoud.elsaeed@gmail.com  
-**GitHub:** [abdo6999](https://github.com/abdo6999)
+**GitHub:** [abdo6999](https://github.com/Abdelrahman-Mahmoud-Elsaeed)
 
 ---
 

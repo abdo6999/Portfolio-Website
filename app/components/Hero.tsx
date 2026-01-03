@@ -99,7 +99,7 @@ Crafting innovative and accessible digital experiences that help businesses grow
           aria-label="Social links"
           className="flex gap-6 sm:gap-8 justify-center mt-8 sm:mt-10"
         >
-          <a href="https://github.com/abdo6999" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-gray-400 hover:text-cyan-400 transition-colors">
+          <a href="https://github.com/Abdelrahman-Mahmoud-Elsaeed" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-gray-400 hover:text-cyan-400 transition-colors">
             <svg aria-hidden="true" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.95-3.2.69-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.74 2.67 1.24 3.32.95.1-.75.4-1.24.73-1.53-2.55-.29-5.23-1.28-5.23-5.72 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.17 1.18.92-.26 1.9-.39 2.88-.39s1.96.13 2.88.39c2.2-1.5 3.17-1.18 3.17-1.18.62 1.59.23 2.77.11 3.06.73.81 1.18 1.84 1.18 3.1 0 4.45-2.69 5.42-5.25 5.71.41.35.78 1.03.78 2.07 0 1.5-.01 2.71-.01 3.08 0 .3.21.66.79.55C20.71 21.38 24 17.08 24 12 24 5.73 18.27.5 12 .5z"/></svg>
           </a>
 
@@ -142,7 +142,7 @@ Crafting innovative and accessible digital experiences that help businesses grow
         content="Angular, TypeScript, JavaScript, HTML5, CSS3, SCSS, Responsive Web Design, ASP.NET Core, C#, Entity Framework Core, SQL Server, RESTful APIs, Authentication, Authorization, CI/CD Pipelines, Docker, GitHub Actions, AWS, Netlify, Unit Testing, Integration Testing, Debugging, Performance Optimization"
       />
       <meta itemProp="url" content="https://abdelrahman-mahmoud.netlify.app/" />
-      <link itemProp="sameAs" href="https://github.com/abdo6999" />
+      <link itemProp="sameAs" href="https://github.com/Abdelrahman-Mahmoud-Elsaeed" />
       <link itemProp="sameAs" href="https://www.linkedin.com/in/abdelrahman-mahmoud-akl/" />
     </header>
   </article>

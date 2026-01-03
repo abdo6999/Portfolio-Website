@@ -112,7 +112,7 @@ export default function RootLayout({
               image: "https://abdelrahman-mahmoud.netlify.app/me.jpg",
               sameAs: [
                 "https://www.linkedin.com/in/abdelrahman-mahmoud-akl/", 
-                "https://github.com/abdo6999",
+                "https://github.com/Abdelrahman-Mahmoud-Elsaeed",
                 "https://twitter.com/abdoakl18"
               ],
               alumniOf: {
